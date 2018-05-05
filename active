@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# NOTE:
+# This file will be installed in /config/failover/active and it will
+# be called by /usr/lib/failover/f5active
+#
+# - This file is for customer additions for tasks
+#   to be performed when failover goes to active
+#
+# - It is possible for this script to be called multiple times, so it
+#   should not persist on the system so it won't fill up the process table
+#
+# External Secondary IP failover
+/config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/OCI/vnicext2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljtkydglblwpdiramxocwxtdi363zhdy7zwsfhx7devvxy4kewxjukq"
+# Internal Secondary IP failover
+/config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/OCI/vnicint2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljtkremaf23s5q4rmp3fiqdsmkna47qiivmudgpznahupmcjhb2z5dq"
