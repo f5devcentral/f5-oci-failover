@@ -10,9 +10,9 @@ exec 1> >(logger -s -t $(basename $0)) 2>&1
 
 function oci-curl {
     # TODO: update these values to your own
-	local tenancyId="ocid1.tenancy.oc1..aaaaaaaa2hgizx4nbtvb2zesgaegq6n2ug4ka2tasa5w4ryjs63zlaje3lya";
-	local authUserId="ocid1.user.oc1..aaaaaaaaky3iyt7oqbdolpppdnqfbbarb57ydyxjorw2oh57xpccx4tlrvwq";
-	local keyFingerprint="b0:77:5f:39:37:36:e2:dc:98:d2:05:b6:ca:92:78:f6";
+	local tenancyId="ocid1.tenancy.oc1..ocid1.privateip.oc1.phx.abyhqljREPLACETHISWITHYOUROCIDSa";
+	local authUserId="ocid1.user.oc1..aaaaaaaaky3iyt7oqbdolpppdnqfbbarbREPLACETHISWITHYOUROCIDSvwq";
+	local keyFingerprint="b0:77:5f:39:37:36:e2:dc:98:d2:00:00:00:00:00:00";
 	local privateKeyPath="/config/failover/oci_api_key.pem";
 
     local alg=rsa-sha256

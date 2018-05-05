@@ -11,6 +11,6 @@
 #   should not persist on the system so it won't fill up the process table
 #
 # External Secondary IP failover
-/config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/OCI/vnicext2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljtkydglblwpdiramxocwxtdi363zhdy7zwsfhx7devvxy4kewxjukq"
+/config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/OCI/vnicext2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljREPLACETHISWITHYOUROCIDShdy"
 # Internal Secondary IP failover
-/config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/OCI/vnicint2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljtkremaf23s5q4rmp3fiqdsmkna47qiivmudgpznahupmcjhb2z5dq"
+/config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/OCI/vnicint2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljREPLACETHISWITHYOUROCIDS5dq"
