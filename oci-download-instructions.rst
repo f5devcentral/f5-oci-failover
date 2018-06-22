@@ -160,9 +160,9 @@ In the OCI environment, Public and Private IP addresses are mapped to Floating S
 
 Ensure the following protocols/ports are permitted between nodes. Note : No matter which Port lockdown setting used these ports are permitted. OCI security lists will need to be modified to allow the following:
 
-    UDP/1026 (network failover)
-    TCP/1028 (connection & persistence mirroring)
-    TCP/4353 (CMI – peer communication)
+    - UDP/1026 (network failover)
+    - TCP/1028 (connection & persistence mirroring)
+    - TCP/4353 (CMI – peer communication)
 
 
 1. Go to :guilabel:`Compute -> Instances -> Instance Details` for one of the BIG-IP Instances you deployed in Step 3.
