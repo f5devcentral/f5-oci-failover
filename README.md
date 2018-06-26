@@ -7,6 +7,7 @@ You need to create a unique user for failover similar to a system account. I do 
 
 https://docs.us-phoenix-1.oraclecloud.com/Content/API/Concepts/apisigningkey.htm#How
 
+NOTE: *** Detailed download and installation instructions can be found in the file BIG-IPVE_Oracle.pdf in this repository ***
 
 The user/group must have the minimum policy:
 --------------------------------------------
