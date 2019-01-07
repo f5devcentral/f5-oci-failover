@@ -1,0 +1,23 @@
+logger -p local0.notice "$0 ($TRAFFICGROUP): Started."
+
+case "$TRAFFICGROUP" in
+    /Common/traffic-group-1)
+        # External Secondary IP failover
+        /config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/failover/vnicext2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljrugvuyw2ixa2zjgqrwvmcyp5xtvuoja5xvpfk7d26ckwbbzb7daaa"
+        # Internal Secondary IP failover
+        /config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/failover/vnicint2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljri2mtpgjxvjxrwo7n66unqykoo5n7fdq2lcglyuhv6bopqb45deha"
+        ;;
+
+    /Common/traffic-group-2)
+        # External Secondary IP failover
+        /config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/failover/vnicext2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljrpyes7enkfgleyuttfluyp6l4ddg5u23c477mwaorjf66tm7pwnuq"
+        # Internal Secondary IP failover
+        /config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/failover/vnicint2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljrypd4nf7476sih4lkiya4df7ogejcjqn3n4l5m4fduwcmlaya7ota"
+        ;;
+
+    *)
+        logger -p local0.notice "$0 unknown traffic group: $TRAFFICGROUP"
+        ;;
+esac
+
+logger -p local0.notice "$0 ($TRAFFICGROUP): Finished."
