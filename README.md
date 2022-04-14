@@ -8,7 +8,7 @@ Configuration tools provided in this GitHub repo are community-supported. Howeve
 Please let us know if you find an issue or have a suggestion related to these failover configuration tools, by submitting an issue through this GitHub repository. Provide as much information as you can about what you found, how you found it, your environment, suggested enhancements, and other similar details. 
 
 #### Copyright
-Copyright 2014-2019 F5 Networks Inc.
+Copyright 2014-2022 F5 Inc.
 
 #### License
 
