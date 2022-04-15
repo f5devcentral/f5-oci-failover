@@ -1,6 +1,10 @@
+#!/bin/bash
+exec 3>&1 4>&2
+trap 'exec 2>&4 1>&3' 0 1 2 3
+exec 1>/var/log/messages 2>&1
 logger -p local0.notice "$0 traffic-group-1 : Started."
         # External Secondary IP failover
         /config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/failover/vnicext2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljrugvuyw2ixa2zjgqrwvmcyp5xtvuoja5xvpfk7d26ckwbbzb7daaa"
         # Internal Secondary IP failover
         /config/failover/oci-curl iaas.us-phoenix-1.oraclecloud.com PUT /config/failover/vnicint2.json "/20160918/privateIps/ocid1.privateip.oc1.phx.abyhqljri2mtpgjxvjxrwo7n66unqykoo5n7fdq2lcglyuhv6bopqb45deha"
-logger -p local0.notice "$0 ($TRAFFICGROUP): Finished."
+logger -p local0.notice "$0 traffic-group-1: Finished."
