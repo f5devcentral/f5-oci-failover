@@ -1,0 +1,5 @@
+#!/bin/bash
+logger -p local0.notice "$0 traffic-group-1 : Refresh Started... Waiting 30 seconds to call tgactive."
+pkill -f tgactive
+sleep 30
+/config/failover/tgactive

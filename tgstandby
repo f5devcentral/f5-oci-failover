@@ -1,0 +1,4 @@
+#!/bin/bash
+logger -p local0.notice "$0 traffic-group-1 : Killing any still running tgactive or tgrefresh scripts."
+pkill -f tgactive
+pkill -f tgrefresh
